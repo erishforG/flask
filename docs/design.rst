@@ -1,24 +1,22 @@
 .. _design:
 
-Design Decisions in Flask
+Flask에서 설계 결정(Design decisions)
 =========================
 
-If you are curious why Flask does certain things the way it does and not
-differently, this section is for you.  This should give you an idea about
-some of the design decisions that may appear arbitrary and surprising at
-first, especially in direct comparison with other frameworks.
+만약 당신이 Flask가 다른 방식도 아니고 특정한 방식으로 운영되는지 궁금하다면,
+이 섹션은 당신을 위한 것이다. 이것은 당신에게 다른 프레임워크와 비교하였을때,
+처음에는 임의적이고 놀랍게 보이는 설계 결정들에 대한 아이디어를 줄 것이다.
 
-
-The Explicit Application Object
+명시적 어플리케이션 객체(The Explicit Application Object)
 -------------------------------
 
-A Python web application based on WSGI has to have one central callable
-object that implements the actual application.  In Flask this is an
-instance of the :class:`~flask.Flask` class.  Each Flask application has
-to create an instance of this class itself and pass it the name of the
-module, but why can't Flask do that itself?
+WSGI 기반 파이썬 웹 어플리케이션은 실제 어플리케이션으로 구현된
+하나의 중앙 컬러블(callable) 객체를 가지고 있어야 한다.
+이것은 Flask에서 Flask 클래스의 객체이다. 각각의 Flask 어플리케이션은
+자신이 이 클래스의 객체를 생성해야만 하고, 모듈의 이름을 넘여야 한다.
+하지만 왜 Flask 자신이 하지 않는 것일까?
 
-Without such an explicit application object the following code::
+다음은 명시적 어플리케이션 객체가 없는 코드는::
 
     from flask import Flask
     app = Flask(__name__)
@@ -27,7 +25,7 @@ Without such an explicit application object the following code::
     def index():
         return 'Hello World!'
 
-Would look like this instead::
+이것처럼 보이게 될 것이다::
 
     from hypothetical_flask import route
 
