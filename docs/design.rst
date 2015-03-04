@@ -33,16 +33,15 @@ WSGI 기반 파이썬 웹 어플리케이션은 실제 어플리케이션으로 
     def index():
         return 'Hello World!'
 
-There are three major reasons for this.  The most important one is that
-implicit application objects require that there may only be one instance at
-the time.  There are ways to fake multiple applications with a single
-application object, like maintaining a stack of applications, but this
-causes some problems I won't outline here in detail.  Now the question is:
-when does a microframework need more than one application at the same
-time?  A good example for this is unittesting.  When you want to test
-something it can be very helpful to create a minimal application to test
-specific behavior.  When the application object is deleted everything it
-allocated will be freed again.
+여기에는 세가지 주요한 이유가 있다. 제일 중요한 이유는 
+내시적 어플리케이션 객체들(implicit application objects)은 매 번마다 하나의 변수를
+필요로 하기 때문이다. 다량의 어플리케이션들을 유지하는 것처럼, 
+하나의 어플리케이션 객체로 여러개의 어플리케이션들을 속이는 방법도 있다.
+하지만 여기서는 자세히 설명하지 않는 몇몇의 문제들을 발생시킨다. 지금 질문은 이렇다:
+똑같은 상황에 하나의 어플리케이션보다도 더 많이 마이크로프레임워크를 필요로 하는때는
+언제인가? 이에 대한 좋은 예시는 단위테스트이다. 당신이 특정한 기능을 테스트할 때
+미니멀 어플리케이션을 만드는 것이 매우 도움이 될 것이다. 
+어플리케이션 객체가 삭제가 된다면, 어플리케이션에 할당된 모든 것은 해제될 것이다.
 
 Another thing that becomes possible when you have an explicit object lying
 around in your code is that you can subclass the base class
