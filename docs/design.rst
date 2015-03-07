@@ -43,11 +43,10 @@ WSGI 기반 파이썬 웹 어플리케이션은 실제 어플리케이션으로 
 미니멀 어플리케이션을 만드는 것이 매우 도움이 될 것이다. 
 어플리케이션 객체가 삭제가 된다면, 어플리케이션에 할당된 모든 것은 해제될 것이다.
 
-Another thing that becomes possible when you have an explicit object lying
-around in your code is that you can subclass the base class
-(:class:`~flask.Flask`) to alter specific behavior.  This would not be
-possible without hacks if the object were created ahead of time for you
-based on a class that is not exposed to you.
+명시적 객체들이 코드 내에 있을때 가능해진 또 다른 것은 특정 기능을 바꾸기 위해서
+기본 클래스를 하위로 분리시킬 수 있다(:class:'~flask.Flask').
+만약 객체가 노출되지 않은 클레스를 기반으로 예정보다 빨리 객체가 만들어졌다면
+해킹을 제외하면 이는 불가능하다.
 
 But there is another very important reason why Flask depends on an
 explicit instantiation of that class: the package name.  Whenever you
