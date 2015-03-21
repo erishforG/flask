@@ -48,34 +48,33 @@ WSGI 기반 파이썬 웹 어플리케이션은 실제 어플리케이션으로 
 만약 객체가 노출되지 않은 클레스를 기반으로 예정보다 빨리 객체가 만들어졌다면
 해킹을 제외하면 이는 불가능하다.
 
-But there is another very important reason why Flask depends on an
-explicit instantiation of that class: the package name.  Whenever you
-create a Flask instance you usually pass it `__name__` as package name.
-Flask depends on that information to properly load resources relative
-to your module.  With Python's outstanding support for reflection it can
-then access the package to figure out where the templates and static files
-are stored (see :meth:`~flask.Flask.open_resource`).  Now obviously there
-are frameworks around that do not need any configuration and will still be
-able to load templates relative to your application module.  But they have
-to use the current working directory for that, which is a very unreliable
-way to determine where the application is.  The current working directory
-is process-wide and if you are running multiple applications in one
-process (which could happen in a webserver without you knowing) the paths
-will be off.  Worse: many webservers do not set the working directory to
-the directory of your application but to the document root which does not
-have to be the same folder.
+그러나 왜 Flask가 저 클래스의 명시적 인스턴스 생성에 의존하는 또 다른 매우 중요한 이유가 있다.
+: 패키지 네임. 언제나 Flask 인스턴스를 생성할때마다, 보통 패키지 네임으로서 '__name__'으로 전달한다.
+Flask는 당신의 모듈에 관련된 적절히 리소스를 부르는 것은 앞의 정보에 의존한다.
+반영을 위해 Python의 외적인 지원의 도움으로서
+어디에 템플릿과 고정(static) 파일들이 저장되었는지 찾기 위해 패키지에 접속하는 것이 가능해진다.
+(참조 :meth:`~flask.Flask.open_resource`). 현재 명확하게도 
+어떠한 환경 설정도 필요하지 않으며 어플리케이션 모듈에 관련된 템블릿을 불러오는 것이
+가능한 프레임워크들이 존재한다.
+하지만 그것들은 어디에 어플리케이션이 있는지 구분하기 위해 
+매우 믿을 수없는 방법으로서 현재 운영되는 디렉토리를 사용해야만 한다.
+현재 운영되는 디렉토리는 폭넓은 진행이 가능하며(process-wide)
+만약에 하나의 프로세스 안에서 여러개의 어플리케이션을 운영중이라면
+(당신이 모르게 웹서버에서 일어 날 수 있다) 경로는 사라진다.
+나쁨 : 많은 웹서버들은 직접 당신의 어플리케이션의 디렉토리를 작동시키는 것보다도
+ 똑같은 폴더가 아니어도 되는 다큐먼트 루트(root)를 작동시킨다.
 
-The third reason is "explicit is better than implicit".  That object is
-your WSGI application, you don't have to remember anything else.  If you
-want to apply a WSGI middleware, just wrap it and you're done (though
-there are better ways to do that so that you do not lose the reference
-to the application object :meth:`~flask.Flask.wsgi_app`).
+세번째 이유는 "명시적이 내시적인 것보다 좋다"는 것이다.
+다른 것들은 기억할 필요 없이, 그 객체는 당신의 WSGI 어플리케이션이다.
+혹시 당신이 WSGI 미들웨어를 적용시키고 싶다면, 단순하게 감싸면 끝이다.
+(비록 당신은 어플리케이션에서의 레퍼런스를 잃지 않기 위해
+이것을 하기 위해 더 좋은 방법들이 있다. :meth:`~flask.Flask.wsgi_app`)
 
-Furthermore this design makes it possible to use a factory function to
-create the application which is very helpful for unittesting and similar
-things (:ref:`app-factories`).
+더욱이 이 디자인은 유닛테스팅과 비슷한 것들을 위해 매우 도움이 되는
+어플리케이션을 만들기 위해 팩토리 함수 (factory function)을 사용하는 것을
+가능하게 만든다. (:ref:`app-factories`)
 
-The Routing System
+루팅 시스템(The Routing System)
 ------------------
 
 Flask uses the Werkzeug routing system which has was designed to
