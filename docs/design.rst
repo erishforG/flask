@@ -77,20 +77,19 @@ Flask는 당신의 모듈에 관련된 적절히 리소스를 부르는 것은 �
 루팅 시스템(The Routing System)
 ------------------
 
-Flask uses the Werkzeug routing system which has was designed to
-automatically order routes by complexity.  This means that you can declare
-routes in arbitrary order and they will still work as expected.  This is a
-requirement if you want to properly implement decorator based routing
-since decorators could be fired in undefined order when the application is
-split into multiple modules.
+Flask는 복합성에 의해 자동적으로 루트를 정렬하기 위해 고안된
+베크저그 루팅 시스템(Werkzeug routing system)을 사용한다.
+이것은 당신이 임의적인 순서에서 루트들을 선언할 수 있으며
+그것들이 기대한대로 여전히 작동할 것이라는 뜻이다.
+만약 어플리케이션이 여러개의 모듈로 나뉠때
+데코레이터들(decorators)이 한정되지 않은 순서로서 던져지기 때문에
+당신이 루팅에 기반한 데코레이터를 제대로 상속을 원한다면 이것은 필수조건이다.
+베크저그 루팅 시스템과 함께 또 다른 디자인 결정은
+베크저그에서의 루트들은 URL을 특벽하게 보장하려 한다는 것이다.
+만약에 루트가 애매하면 이것은 자동적으로 표준 URL로 재연결하는 것이므로
+베크저그는 상당히 좋다.
 
-Another design decision with the Werkzeug routing system is that routes
-in Werkzeug try to ensure that URLs are unique.  Werkzeug will go quite far
-with that in that it will automatically redirect to a canonical URL if a route
-is ambiguous.
-
-
-One Template Engine
+하나의 템블릿 엔진(One Template Engine)
 -------------------
 
 Flask decides on one template engine: Jinja2.  Why doesn't Flask have a
