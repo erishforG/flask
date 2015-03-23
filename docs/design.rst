@@ -92,16 +92,17 @@ Flask는 복합성에 의해 자동적으로 루트를 정렬하기 위해 고�
 하나의 템블릿 엔진(One Template Engine)
 -------------------
 
-Flask decides on one template engine: Jinja2.  Why doesn't Flask have a
-pluggable template engine interface?  You can obviously use a different
-template engine, but Flask will still configure Jinja2 for you.  While
-that limitation that Jinja2 is *always* configured will probably go away,
-the decision to bundle one template engine and use that will not.
+Flask는 하나의 템플릿 엔진에 의해 결정된다 : Jinja2.  왜 Flask는 플러거블(pluggable)
+템플릿 엔진 인터페이스를 갖고 있지 않은 것일까?
+당신은 다른 템플릿 엔진을 분명하게도 쓸 수 있지만, Flask는 여전히 당신에게 Jinja2를
+설정할 것이다. 그동안에 Jinja2를 항상 설정하도록 하는 제한은 사라졌지만,
+하나의 템플릿 엔진을 포함시키고 사용하도록 하는 결정은 그렇지 않을 것이다.
 
-Template engines are like programming languages and each of those engines
-has a certain understanding about how things work.  On the surface they
-all work the same: you tell the engine to evaluate a template with a set
-of variables and take the return value as string.
+템플릿 엔진은 프로그래밍 언어와 비슷하고 각각의 이런 엔진들은
+어떻게 작동되는지에 대한 확실히 이해가 필요하다.
+표면적으로는 그것들은 모두 동일하게 작동한다:
+당신은 변수들의 합(set)으로 된 템플릿을 계산하라고 엔진에게 명령할 것이고
+스트링(string)으로서 값을 반환받을 것이다.
 
 But that's about where similarities end.  Jinja2 for example has an
 extensive filter system, a certain way to do template inheritance, support
