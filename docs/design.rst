@@ -89,7 +89,7 @@ Flask는 복합성에 의해 자동적으로 루트를 정렬하기 위해 고�
 만약에 루트가 애매하면 이것은 자동적으로 표준 URL로 재연결하는 것이므로
 베크저그는 상당히 좋다.
 
-하나의 템블릿 엔진(One Template Engine)
+단일 템블릿 엔진(One Template Engine)
 -------------------
 
 Flask는 하나의 템플릿 엔진에 의해 결정된다 : Jinja2.  왜 Flask는 플러거블(pluggable)
