@@ -104,14 +104,13 @@ Flask는 하나의 템플릿 엔진에 의해 결정된다 : Jinja2.  왜 Flask�
 당신은 변수들의 합(set)으로 된 템플릿을 계산하라고 엔진에게 명령할 것이고
 스트링(string)으로서 값을 반환받을 것이다.
 
-But that's about where similarities end.  Jinja2 for example has an
-extensive filter system, a certain way to do template inheritance, support
-for reusable blocks (macros) that can be used from inside templates and
-also from Python code, uses Unicode for all operations, supports
-iterative template rendering, configurable syntax and more.  On the other
-hand an engine like Genshi is based on XML stream evaluation, template
-inheritance by taking the availability of XPath into account and more.
-Mako on the other hand treats templates similar to Python modules.
+그러나 저것은 유사성이 끝나는 것에 대한 것이다. 예제를 통한 Jinja2는 템플릿 상속 및
+내부 템플릿과 모든 명령어를 유니코드로 사용하는 Python 코드에서도
+사용될 수 있는 재활용이 가능한 블럭들(마크로스 macros)을 위한
+지원, 반복되는 템플릿 렌더링, 구문 설정 등등을 확실하게 할 수 있는 방법인 광범위한 필터 시스템을 갖고 있다.
+한편 Gehshi같은 다른 엔진은 계정 등등의 Xpath의 유효성을 가져감으로
+XML 스트림 측정, 템플릿 상속에 기반을 두고 있다.
+Mako같은 다른 템플릿은 Python 모듈과 비슷한 템플릿으로 처리된다.
 
 When it comes to connecting a template engine with an application or
 framework there is more than just rendering templates.  For instance,
