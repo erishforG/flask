@@ -112,10 +112,10 @@ Flask는 하나의 템플릿 엔진에 의해 결정된다 : Jinja2.  왜 Flask�
 XML 스트림 측정, 템플릿 상속에 기반을 두고 있다.
 Mako같은 다른 템플릿은 Python 모듈과 비슷한 템플릿으로 처리된다.
 
-When it comes to connecting a template engine with an application or
-framework there is more than just rendering templates.  For instance,
-Flask uses Jinja2's extensive autoescaping support.  Also it provides
-ways to access macros from Jinja2 templates.
+어플리케이션이나 프레임워크와 함께 템플릿 엔진을 연결할 때,
+단순히 템플릿을 렌더링하는 것보다 더 있다. 예를 들어,
+Flask는 Jinja2의 광범위한 오토스케이프(autoscaping) 지원을 사용한다.
+또한 Jinja2 템플릿으로부터 마크로스에 접속하는 방법들을 제공한다.
 
 A template abstraction layer that would not take the unique features of
 the template engines away is a science on its own and a too large
