@@ -117,16 +117,14 @@ Mako같은 다른 템플릿은 Python 모듈과 비슷한 템플릿으로 처리
 Flask는 Jinja2의 광범위한 오토스케이프(autoscaping) 지원을 사용한다.
 또한 Jinja2 템플릿으로부터 마크로스에 접속하는 방법들을 제공한다.
 
-A template abstraction layer that would not take the unique features of
-the template engines away is a science on its own and a too large
-undertaking for a microframework like Flask.
+템플릿 엔진의 특별한 기능들을 가져가지 않는 템플릿 추상화 레이어는 그것 자체가 과학이다.
+그리고 Flask같은 마이크로프레임워크에는 맡기에는 너무 크다.
 
-Furthermore extensions can then easily depend on one template language
-being present.  You can easily use your own templating language, but an
-extension could still depend on Jinja itself.
+더욱이 확장은 존재하는 단일 템플릿 언어에 따라 쉽게 좌우된다.
+당신은 쉽게 자신의 템플레이팅(templating) 언어를 사용할 수 있지만,
+확장은 여전히 Jinja 자체에 의해 좌지우지될 수 있다.
 
-
-Micro with Dependencies
+마이크로(Micro)와 의존성
 -----------------------
 
 Why does Flask call itself a microframework and yet it depends on two
