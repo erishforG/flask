@@ -78,7 +78,7 @@ Flask는 당신의 모듈에 관련된 적절히 리소스를 부르는 것은 �
 ------------------
 
 Flask는 복합성에 의해 자동적으로 루트를 정렬하기 위해 고안된
-베크저그 루팅 시스템(Werkzeug routing system)을 사용한다.
+Werkzeug 루팅 시스템을 사용한다.
 이것은 당신이 임의적인 순서에서 루트들을 선언할 수 있으며
 그것들이 기대한대로 여전히 작동할 것이라는 뜻이다.
 만약 어플리케이션이 여러개의 모듈로 나뉠때
@@ -127,18 +127,15 @@ Flask는 Jinja2의 광범위한 오토스케이프(autoscaping) 지원을 사용
 마이크로(Micro)와 의존성
 -----------------------
 
-Why does Flask call itself a microframework and yet it depends on two
-libraries (namely Werkzeug and Jinja2).  Why shouldn't it?  If we look
-over to the Ruby side of web development there we have a protocol very
-similar to WSGI.  Just that it's called Rack there, but besides that it
-looks very much like a WSGI rendition for Ruby.  But nearly all
-applications in Ruby land do not work with Rack directly, but on top of a
-library with the same name.  This Rack library has two equivalents in
-Python: WebOb (formerly Paste) and Werkzeug.  Paste is still around but
-from my understanding it's sort of deprecated in favour of WebOb.  The
-development of WebOb and Werkzeug started side by side with similar ideas
-in mind: be a good implementation of WSGI for other applications to take
-advantage.
+Flask는 그 자체를 마이크로프레임워크라 불리고
+그럼에도 두개의 라이브러리 (Werkzeug와 Jinja2)에 좌우되는가? 왜 그래야만 하는가? 
+우리가 웹 개발환경의 Ruby쪽을 살펴 본다면, 그곳에는 WSGI와 매우 비슷한 프로토콜을 갖고 있다.
+그것을 그 곳에서는 Rack이라 불리지만, 게다가 루비를 위한 WSGI 렌디션(rendition)과 무척 닮아 보인다.
+그러나 루비에서 거의 모든 어플리케이션들은 Rack에 직접적으로 적용되지 않지만,
+동일한 이름으로 라이브러리의 상위로 작동된다. 이 Rack 라이브러리는 Python에서 두가지의 동일점을 가지고 있다:
+: WebOb (이전에 Paste) 와 Werkzeug. Paste는 여전히 있지만 내가 이해하는 바로는 WebOb에 있어서 사양되는 기술이다.
+WebOb 와 Werkzeug의 개발환경은 생각속의 비슷한 아이디어들과 함께 시작했다:
+다른 어플리케이션들이 이점을 취하기 위해 WSGI의 좋은 구현을 해라.
 
 Flask is a framework that takes advantage of the work already done by
 Werkzeug to properly interface WSGI (which can be a complex task at
