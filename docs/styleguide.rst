@@ -1,28 +1,44 @@
-Pocoo Styleguide
+Pocoo 스타일가이드
 ================
 
 The Pocoo styleguide is the styleguide for all Pocoo Projects, including
 Flask.  This styleguide is a requirement for Patches to Flask and a
 recommendation for Flask extensions.
 
+Pococo 스타일가이드는 Flask를 포함한 모든 Pococo 프로젝트들을 위한 스타일가이드이다.
+이 스타일가이드는 Flask의 패치와 Flask 확장기능(extensions)를 위한 요구사항이다.
+
 In general the Pocoo Styleguide closely follows :pep:`8` with some small
 differences and extensions.
 
-General Layout
+일반적으로 Pocoo 스타일 가이드는 :pep:`8`을 따르는데 몇가지 작은 차이와 확장기능이 있다.
+
+일반적인 레이아웃(General Layout)
 --------------
 
 Indentation:
   4 real spaces.  No tabs, no exceptions.
+
+들여쓰기:
+  스페이스 4개. 탭없음, 예외없음.
 
 Maximum line length:
   79 characters with a soft limit for 84 if absolutely necessary.  Try
   to avoid too nested code by cleverly placing `break`, `continue` and
   `return` statements.
 
+줄당 최대 길이(Maximum line length):
+  79 글자인데 절대적으로 필요한 경우 84 글자까지 유연하게 제한한다.
+  `break`, `continue` 와 `return` 문에 의해서 너무 중첩된 코드는 피해라.
+
 Continuing long statements:
   To continue a statement you can use backslashes in which case you should
   align the next line with the last dot or equal sign, or indent four
   spaces::
+
+긴구문 계속 쓰기(Continuing long statements):
+  구문을 계속 쓰기 위해서는 backslashes(\) 사용할 수 있는데 다음 줄의 마지막 마침표(dot) 또는 같음 기호(equal sign) 또는
+  4스페이스 들여쓰기와 정렬 해야한다::
 
     this_is_a_very_long(function_call, 'with many parameters') \
         .that_returns_an_object_with_an_attribute
@@ -33,12 +49,15 @@ Continuing long statements:
 
   If you break in a statement with parentheses or braces, align to the
   braces::
+  만약 괄호 또는 중괄호에서 구문을 끊는다면, 중괄호에 정렬해라.
 
     this_is_a_very_long(function_call, 'with many parameters',
                         23, 42, 'and even more')
 
   For lists or tuples with many items, break immediately after the
   opening brace::
+
+  리스트 또는 튜플(tuple)의 많은 아이템을 위해서는, 중괄호를 연 이후 즉시 끊어라.
 
     items = [
         'this is the first', 'set of items', 'with more items',
@@ -49,6 +68,10 @@ Blank lines:
   Top level functions and classes are separated by two lines, everything
   else by one.  Do not use too many blank lines to separate logical
   segments in code.  Example::
+
+공백 줄(Blank lines):
+  최상위(Top level) 함수 또는 클래스들은 2개의 공백줄로 나눠져야 하고, 나머지는 모두 한개의 공백줄이다.
+  너무 많은 공백줄을 코드상에서 논리적인 구문을 주기 위해서 사용하지 마라. 예를들면::
 
     def hello(name):
         print 'Hello %s!' % name
