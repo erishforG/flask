@@ -137,14 +137,13 @@ Flask는 그 자체를 마이크로프레임워크라 불리고
 WebOb 와 Werkzeug의 개발환경은 생각속의 비슷한 아이디어들과 함께 시작했다:
 다른 어플리케이션들이 이점을 취하기 위해 WSGI의 좋은 구현을 해라.
 
-Flask is a framework that takes advantage of the work already done by
-Werkzeug to properly interface WSGI (which can be a complex task at
-times).  Thanks to recent developments in the Python package
-infrastructure, packages with dependencies are no longer an issue and
-there are very few reasons against having libraries that depend on others.
+Flask는 (때때로 복합 기능이 될 수 있는) WSGI와 적절히 접점을 두고 있는 Werkzeug에 의해
+이미 완성되어 있는 일의 이득을 얻을 수 있는 프레임워크이다.
+Python 패키지 기반의 최근 발달에 고맙게도,
+패키지 종속성은 더 이상 이슈가 아니며
+다른것에 의존하는 라이브러리를 갖는것에 반해서도 거의 적은 이유들이 있다.
 
-
-Thread Locals
+스레드 로컬(Thread Locals)
 -------------
 
 Flask uses thread local objects (context local objects in fact, they
