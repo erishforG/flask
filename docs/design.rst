@@ -146,20 +146,19 @@ Python 패키지 기반의 최근 발달에 고맙게도,
 스레드 로컬(Thread Locals)
 -------------
 
-Flask uses thread local objects (context local objects in fact, they
-support greenlet contexts as well) for request, session and an extra
-object you can put your own things on (:data:`~flask.g`).  Why is that and
-isn't that a bad idea?
+Flask는 (:data:`~flask.g`)에 당신이 당신의 것들을 올릴 수 있는
+요청, 세션과 추가 객체들을 위해  스레드 로컬 객체(thread local objects)를 사용한다
+(사실은 컨텍스트 로컬 객체이며, 이것들은 그린렛 콘텍스트(greenlet contexts) 또한 지원한다).
+왜 그러며 이것은 나쁜 아이디어가 아닌가?
 
-Yes it is usually not such a bright idea to use thread locals.  They cause
-troubles for servers that are not based on the concept of threads and make
-large applications harder to maintain.  However Flask is just not designed
-for large applications or asynchronous servers.  Flask wants to make it
-quick and easy to write a traditional web application.
+그렇다. 보통 스레드를 로컬에서 사용한다는 것은 생각보다 좋은 아이디어는 아니다.
+그것들은 스레드의 컨셉에 기반된 서버에게서 문제가 발생하며
+규모가 큰 어플리케이션들을 유지하기 어렵게 만든다.
+그렇지만 Flask는 단지 큰 어플리케이션이나 비동기 서버들을 위해 디자인 된것이 아니다.
+Flask는 빠르게 만들고 싶으며 통상적인 웹 어플리케이션을 쉽게 작성할 수 있기를 원한다.
 
-Also see the :ref:`becomingbig` section of the documentation for some
-inspiration for larger applications based on Flask.
-
+또한 Flask 기반의 큰 어플리케이션들의 영감을 받고 싶으면
+다큐먼트의 :ref:`becomingbig` 섹션을 보라.
 
 What Flask is, What Flask is Not
 --------------------------------
