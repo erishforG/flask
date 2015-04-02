@@ -160,14 +160,15 @@ Flask는 빠르게 만들고 싶으며 통상적인 웹 어플리케이션을 �
 또한 Flask 기반의 큰 어플리케이션들의 영감을 받고 싶으면
 다큐먼트의 :ref:`becomingbig` 섹션을 보라.
 
-What Flask is, What Flask is Not
+무엇이 Flask이고, 무엇이 Flask가 아닌가
 --------------------------------
 
-Flask will never have a database layer.  It will not have a form library
-or anything else in that direction.  Flask itself just bridges to Werkzeug
-to implement a proper WSGI application and to Jinja2 to handle templating.
-It also binds to a few common standard library packages such as logging.
-Everything else is up for extensions.
+Flask는 절대로 데이터베이스 층을 갖지 않을 것이다.
+또한 저 방향으로의 폼(form) 라이브러리나 다른 것들을 갖지 않을 것이다.
+Flask 자신은 단지 적절한 WSGI 어플리케이션을 도구로서 사용하기 위해 Werkzeug와
+템플레이팅을 처리하기 위해 Jinja2에 다리를 놓는 것 뿐이다.
+그리고 로깅같은 몇개 없는 흔한 기본 라이브러리 패키지들을 엮는다.
+그 이외의 모든 것들은 확장을 위한 것이다.
 
 Why is this the case?  Because people have different preferences and
 requirements and Flask could not meet those if it would force any of this
