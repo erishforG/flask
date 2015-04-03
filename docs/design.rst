@@ -170,10 +170,10 @@ Flask 자신은 단지 적절한 WSGI 어플리케이션을 도구로서 사용�
 그리고 로깅같은 몇개 없는 흔한 기본 라이브러리 패키지들을 엮는다.
 그 이외의 모든 것들은 확장을 위한 것이다.
 
-Why is this the case?  Because people have different preferences and
-requirements and Flask could not meet those if it would force any of this
-into the core.  The majority of web applications will need a template
-engine in some sort.  However not every application needs a SQL database.
+왜 이 케이스인 것일까? 왜냐하면 사람들은 다른 취향과 요구사항들을 갖고 있으며
+Flask는 핵심적으로 어떠한 것들이라도 강요하지 않았다면 이러한 것들을 만나지 못했을 것이다.
+다수의 웹 어플리케이션들은 일정한 템플릿 엔진을 필요로 할 것이다.
+그렇지만 모든 어플리케이션들이 SQL 데이터베이스를 필요로 하는 것이 아니다.
 
-The idea of Flask is to build a good foundation for all applications.
-Everything else is up to you or extensions.
+Flask의 아이디어는 모든 어플리케이션들을 위한 좋은 기반을 만드는 것이다.
+이외의 것들은 당신 혹은 확장에 따른 것이다.
