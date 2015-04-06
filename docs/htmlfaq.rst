@@ -1,14 +1,14 @@
 HTML/XHTML FAQ
 ==============
 
-The Flask documentation and example applications are using HTML5.  You
-may notice that in many situations, when end tags are optional they are
-not used, so that the HTML is cleaner and faster to load.  Because there
-is much confusion about HTML and XHTML among developers, this document tries
-to answer some of the major questions.
+Flask 문서와 예제 어플리케이션은 HTML5를 사용한다. 
+당신은 그럼으로써 HTML이 더욱 명확하고 부르기 빨라진다는 것을
+마침 태그(end tags)가 사용되지 않는 것에 대해 선택적인 것과 같은
+많은 상황속에서 눈치챌 것이다.
+왜냐하면 개발자 사이에서 HTML과 XHTML 사이에 혼란이 있으며, 이 문서는
+주요한 질문들들 중 몇몇에 대해 대답하려 한다. 
 
-
-History of XHTML
+XHTML의 역사
 ----------------
 
 For a while, it appeared that HTML was about to be replaced by XHTML.
@@ -45,7 +45,7 @@ XHTML also changed the way JavaScript is used. To properly work with XHTML,
 programmers have to use the namespaced DOM interface with the XHTML
 namespace to query for HTML elements.
 
-History of HTML5
+HTML5의 역사
 ----------------
 
 Development of the HTML5 specification was started in 2004 under the name
@@ -65,7 +65,7 @@ specification under the umbrella of the W3C, known as HTML5.  Currently,
 it appears that XHTML is losing traction, as the XHTML 2 working group has
 been disbanded and HTML5 is being implemented by all major browser vendors.
 
-HTML versus XHTML
+HTML VS XHTML
 -----------------
 
 The following table gives you a quick overview of features available in
@@ -113,7 +113,7 @@ superseded by XHTML 1.1 and the barely-used XHTML5.)
 .. |N| image:: _static/no.png
        :alt: No
 
-What does "strict" mean?
+"strict"의 의미는?
 ------------------------
 
 HTML5 has strictly defined parsing rules, but it also specifies exactly
@@ -165,7 +165,7 @@ This means the following page in HTML5 is perfectly valid:
     </div>
 
 
-New technologies in HTML5
+HTML5에서의 신기술
 -------------------------
 
 HTML5 adds many new features that make Web applications easier to write
@@ -188,7 +188,7 @@ Not all of them are supported in browsers yet, however, so use caution.
 
 .. _Dive Into HTML5: http://www.diveintohtml5.org/
 
-What should be used?
+무엇을 썼어야 할까?
 --------------------
 
 Currently, the answer is HTML5.  There are very few reasons to use XHTML
