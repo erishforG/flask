@@ -90,7 +90,7 @@ Blank lines:
         def get_annoying_name(self):
             return self.name.upper() + '!!!!111'
 
-Expressions and Statements
+표현과 구문(Expressions and Statements)
 --------------------------
 
 General whitespace rules:
@@ -98,7 +98,13 @@ General whitespace rules:
     (e.g.: ``-``, ``~`` etc.) as well on the inner side of parentheses.
   - Whitespace is placed between binary operators.
 
+일반적인 공백 규칙들:
+  - 단어가 아닌 단항 연산자에는 (e.g.: ``-``, ``~`` etc.) 공백을 사용하지 마라.
+  - 공백은 2항 연산자들 사이에 위치한다.
+
+
   Good::
+  좋은 경우::
 
     exp = -1.05
     value = (item_value / item_count) * offset / exp
@@ -106,6 +112,7 @@ General whitespace rules:
     value = my_dict['key']
 
   Bad::
+  좋지못한 경우::
 
     exp = - 1.05
     value = ( item_value / item_count ) * offset / exp
@@ -115,34 +122,49 @@ General whitespace rules:
     value = my_dict ['key']
 
 Yoda statements are a no-go:
+요다 구문은 잘 어울리지 않는다:
   Never compare constant with variable, always variable with constant:
+  절대 상수를 변수에 비교하지마라, 항상 변수를 상수에 비교해라:
 
   Good::
+  좋은 경우::
 
     if method == 'md5':
         pass
 
   Bad::
+  좋지 못한 경우::
 
     if 'md5' == method:
         pass
 
 Comparisons:
+비교:
   - against arbitrary types: ``==`` and ``!=``
   - against singletons with ``is`` and ``is not`` (eg: ``foo is not
     None``)
   - never compare something with `True` or `False` (for example never
     do ``foo == False``, do ``not foo`` instead)
 
+  - 임의의 타입(arbitrary types) 에 대해서는  : ``==`` 와 ``!=``
+  - 싱글톤(singletons) 에 대해서는 : ``is`` 와 ``is not`` (eg: ``foo is not
+    None``)
+  - 어떤 것을 `True` 또는 `False`와 비교하지마라(예를들면, ``foo == False`` 하지마라, 대신에  ``not foo`` 사용해라)
+
 Negated containment checks:
+부정 방지 검사
   use ``foo not in bar`` instead of ``not foo in bar``
+  ``not foo in bar`` 대신에  ``foo not in bar`` 사용해라.
 
 Instance checks:
+인스턴스 검사:
   ``isinstance(a, C)`` instead of ``type(A) is C``, but try to avoid
   instance checks in general.  Check for features.
+  ``type(A) is C`` 대신에 ``isinstance(a, C)``, 그러나 일반적으로 인스턴스 검사를 피하도록 해라.
+   특징들을 검사해라.
 
 
-Naming Conventions
+이름 규칙(Naming Conventions)
 ------------------
 
 - Class names: ``CamelCase``, with acronyms kept uppercase (``HTTPWriter``
@@ -151,6 +173,13 @@ Naming Conventions
 - Method and function names: ``lowercase_with_underscores``
 - Constants: ``UPPERCASE_WITH_UNDERSCORES``
 - precompiled regular expressions: ``name_re``
+
+- 클래스 이름 : ``CamelCase``, 약어는 대문자 유지(``HttpWriter`` 가 아니라 ``HTTPWriter``)
+- 변수 이름 : 소문자와 밑줄(``lowercase_with_underscores``)
+- 메소드 와 함수 이름 : 소문자와 밑줄(``lowercase_with_underscores``)
+- 상수 이름 : 대문자와 밑줄(``UPPERCASE_WITH_UNDERSCORES``)
+- 전처리된 정규 표현식 : ``name_re``
+
 
 Protected members are prefixed with a single underscore.  Double
 underscores are reserved for mixin classes.
