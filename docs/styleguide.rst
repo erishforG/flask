@@ -184,10 +184,18 @@ Instance checks:
 Protected members are prefixed with a single underscore.  Double
 underscores are reserved for mixin classes.
 
+숨기는(Protected) 멤버변수는 한개의 밑줄이 앞에 붙는다.  두개의 밑줄은 믹스인(mixin) 클래스들을 위해서
+예약되어 있다.
+
 On classes with keywords, trailing underscores are appended.  Clashes with
 builtins are allowed and **must not** be resolved by appending an
 underline to the variable name.  If the function needs to access a
 shadowed builtin, rebind the builtin to a different name instead.
+
+클래스 상에서 키워드와 함께 밑줄이 추가된다.  내장(builtin) 되어있는 것들과의 충돌이
+가능한데, 변수의 이름에 밑줄을 추가해서 이를 해결을 반드시 할 필요는 없다.
+만약 함수가 숨겨져있는 내장 변수으로의 접근이 필요하다면, 내장 변수를 대신에 다른이름으로
+연결해라.
 
 Function and method arguments:
   - class methods: ``cls`` as first parameter
@@ -196,8 +204,13 @@ Function and method arguments:
     with ``x`` like in ``display_name = property(lambda x: x.real_name
     or x.username)``
 
+함수와 메소드 인자:
+  - 클래스 메소드 : ``cls`` 를 첫 파라미터로 쓴다.
+  - 인스턴스 메소드 : ``self`` 를 첫 파라미터로 쓴다.
+  - 프로퍼티를 위한 람다는 첫번째 파라미터로  ``x`` 를 쓰는데,  예를들면 ``display_name = property(lambda x: x.real_name
+    or x.username)``
 
-Docstrings
+문서화 문자열(Docstrings)
 ----------
 
 Docstring conventions:
@@ -238,12 +251,21 @@ Module header:
   requirement for approved Flask extensions.
 
 
-Comments
+주석(Comments)
 --------
 
 Rules for comments are similar to docstrings.  Both are formatted with
 reStructuredText.  If a comment is used to document an attribute, put a
 colon after the opening pound sign (``#``)::
+
+    class User(object):
+        #: the name of the user as unicode string
+        name = Column(String)
+        #: the sha1 hash of the password + inline salt
+        pw_hash = Column(String)
+
+주석을 위한 규칙은 문서화 문자열과 비슷하다.  둘다 reStructuredText 를 포맷으로 한다.  만약
+주석이 문서로 사용되어 진다면, (``#``) 뒤에 콜론(:)을 넣어라::
 
     class User(object):
         #: the name of the user as unicode string
