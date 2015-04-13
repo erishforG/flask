@@ -11,16 +11,14 @@ Flask 문서와 예제 어플리케이션은 HTML5를 사용한다.
 XHTML의 역사
 ----------------
 
-For a while, it appeared that HTML was about to be replaced by XHTML.
-However, barely any websites on the Internet are actual XHTML (which is
-HTML processed using XML rules).  There are a couple of major reasons
-why this is the case.  One of them is Internet Explorer's lack of proper
-XHTML support. The XHTML spec states that XHTML must be served with the MIME
-type `application/xhtml+xml`, but Internet Explorer refuses to read files
-with that MIME type.
-While it is relatively easy to configure Web servers to serve XHTML properly,
-few people do.  This is likely because properly using XHTML can be quite
-painful.
+한동안, HTML은 XHTML로 대체되는 양상을 띄기 시작했다.
+그렇지만 인터넷에 있는 거의 어떤 사이트도 사실 XHTML이 아니다. (XML 규칙을 사용하는 HTML이다)
+왜 이런 모습을 가지는지에 대한 몇몇개의 주요한 이유들이 있다.
+그들 중 하나는 인터넷 익스플로러의 제대로 된 XHTML 지원이 부족이다.
+XHTML는 반드시 MIME 형식 'application/xhtml+xml'이 제공되야 한다는 XHTML 스펙을 명시하지만,
+인터넷 익스플로러는 MIME 형식의 파일을 읽는 것을 거부한다.
+상대적으로 웹 서버들을 XHTML 속성으로 제공하는 것을 설정하는 것은 쉽지만,
+거의 적은 사람들만이 한다. 이것이 XHTML을 사용하는 속성은 상당히 고통스러운 이유이다.
 
 One of the most important causes of pain is XML's draconian (strict and
 ruthless) error handling.  When an XML parsing error is encountered,
