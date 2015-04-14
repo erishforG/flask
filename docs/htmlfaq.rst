@@ -20,16 +20,14 @@ XHTML는 반드시 MIME 형식 'application/xhtml+xml'이 제공되야 한다는
 상대적으로 웹 서버들을 XHTML 속성으로 제공하는 것을 설정하는 것은 쉽지만,
 거의 적은 사람들만이 한다. 이것이 XHTML을 사용하는 속성은 상당히 고통스러운 이유이다.
 
-One of the most important causes of pain is XML's draconian (strict and
-ruthless) error handling.  When an XML parsing error is encountered,
-the browser is supposed to show the user an ugly error message, instead
-of attempting to recover from the error and display what it can.  Most of
-the (X)HTML generation on the web is based on non-XML template engines
-(such as Jinja, the one used in Flask) which do not protect you from
-accidentally creating invalid XHTML.  There are XML based template engines,
-such as Kid and the popular Genshi, but they often come with a larger
-runtime overhead and, are not as straightforward to use because they have
-to obey XML rules.
+고통의 제일 중요한 원인들중의 하나는 XML의 가혹한 (엄격하고 무자비한) 에러 핸들링이다.
+XML 파싱 에러와 접하게 되면, 에러로부터 복구 및 무엇을 할 수 있는지에 대한 시도
+대신 브라우저는 사용자가 보기 싫은 에러 메세지를 보이는 것으로 가정한다.
+웹에서 대부분의 (X)HTML 세대는 효력없는 XHTML을 실수로 만드는 것에서부터
+당신을 보호하지 않는 non-XML 템플릿 엔진을 기반으로 하고 있다.
+Kid와 the pupular Genshi와 같은 XML 기반 템플릿 엔진들이 있지만,
+이것들은 더 큰 런타임 부담과 함께 오기도 하며,
+이것들은 XML 규칙을 따라야만 하기 때문에 사용하기 간단하지 않다.
 
 The majority of users, however, assumed they were properly using XHTML.
 They wrote an XHTML doctype at the top of the document and self-closed all
