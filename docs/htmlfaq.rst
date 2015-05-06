@@ -29,13 +29,13 @@ Kid와 the pupular Genshi와 같은 XML 기반 템플릿 엔진들이 있지만,
 이것들은 더 큰 런타임 부담과 함께 오기도 하며,
 이것들은 XML 규칙을 따라야만 하기 때문에 사용하기 간단하지 않다.
 
-The majority of users, however, assumed they were properly using XHTML.
-They wrote an XHTML doctype at the top of the document and self-closed all
-the necessary tags (``<br>`` becomes ``<br/>`` or ``<br></br>`` in XHTML).
-However, even if the document properly validates as XHTML, what really
-determines XHTML/HTML processing in browsers is the MIME type, which as
-said before is often not set properly. So the valid XHTML was being treated
-as invalid HTML.
+그렇지만 다수의 사용자들은 대개 XHTML을 사용한다고 가정한다.
+그들은 다큐먼트의 맨 위에 XHTML 타입을 쓰거나 자체적으로 닫힌 필수 태그들을 썼다.
+(``<br>`` 은 XHTML에서 ``<br/>`` 이나 ``<br></br>``이 된다).
+그렇지만, 다큐먼트가 적절히 XHTML로서 인증된다고 해도, 
+무엇이 정말로 브라우저들안에서 XHTML/HTML 프로세싱이 MIME 타입이라고 단정짓는가,
+이전에 말한 것이 적절히 성립되지 않을때도 있다. 그래서 유효한 XHTML은
+유효하지 않은 HTML로 처리되었다.
 
 XHTML also changed the way JavaScript is used. To properly work with XHTML,
 programmers have to use the namespaced DOM interface with the XHTML
