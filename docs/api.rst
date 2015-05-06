@@ -158,36 +158,33 @@ API
 
    세션 객체는 보통 딕셔너리 객체와 상당히 비슷하게 동작하는데
    차이점은 수정사항을 유지한다는 것이다.
-   The session object works pretty much like an ordinary dict, with the
-   difference that it keeps track on modifications.
 
-   This is a proxy.  See :ref:`notes-on-proxies` for more information.
+   세션은 프록시이다. 더 많은 정보를 위해선 :ref:`notes-on-proxies`을 읽어보기 바란다.
 
-   The following attributes are interesting:
+   다음의 속성(attributes)들은 흥미로울 것이다:
 
    .. attribute:: new
 
-      `True` if the session is new, `False` otherwise.
+      새션이 새로울 경우 'True' 아니라면 'False'
 
    .. attribute:: modified
 
-      `True` if the session object detected a modification.  Be advised
-      that modifications on mutable structures are not picked up
-      automatically, in that situation you have to explicitly set the
-      attribute to `True` yourself.  Here an example::
+      세션 객체가 수정사항을 발견했다면 `True`. 
+      가변의 구조에서는 이런 수정사항이 자동으로 탐지되지 않는다.
+      그럴 경우 직접 속성을 'True'로 설정해주어야한다. 
+      다음 예제를 참고하기 바란다::
 
-          # this change is not picked up because a mutable object (here
-          # a list) is changed.
+          # list가 변화되었는데, 가변구조이기 때문에 변화를 탐지하지 못한다.
           session['objects'].append(42)
-          # so mark it as modified yourself
+          # 그러므로 직접 수정을 했다고 표시해야한다.
           session.modified = True
 
    .. attribute:: permanent
 
-      If set to `True` the session lives for
-      :attr:`~flask.Flask.permanent_session_lifetime` seconds.  The
-      default is 31 days.  If set to `False` (which is the default) the
-      session will be deleted when the user closes the browser.
+      만약 'True'로 설정되어 있으면 세션은 
+      :attr:`~flask.Flask.permanent_session_lifetime`초 동안 지속된다.  
+      기본설정은 31일이다. 만약 'False'로 설정되어 있을 경우(기본설정) 
+      세션은 브라우저를 닫을때 삭제된다. 
 
 
 Session Interface
@@ -195,8 +192,8 @@ Session Interface
 
 .. versionadded:: 0.8
 
-The session interface provides a simple way to replace the session
-implementation that Flask is using.
+
+세션 인터페이스는 플라스크가 사용하는 세션을 대체할 수 있는 간단한 수단을 제공한다.
 
 .. currentmodule:: flask.sessions
 
@@ -217,6 +214,8 @@ implementation that Flask is using.
 
 .. admonition:: Notice
 
+   Flask 0.8 버전 부터 ``PERMANENT_SESSION_LIFETIME``설정 키값(config key)은 
+   정수형(integer)이 될 수 있다.  
    The ``PERMANENT_SESSION_LIFETIME`` config key can also be an integer
    starting with Flask 0.8.  Either catch this down yourself or use
    the :attr:`~flask.Flask.permanent_session_lifetime` attribute on the

@@ -1,21 +1,18 @@
 Security Considerations
 =======================
 
-Web applications usually face all kinds of security problems and it's very
-hard to get everything right.  Flask tries to solve a few of these things
-for you, but there are a couple more you have to take care of yourself.
+웹 앱들은 주로 여러가지 보안문제에 직면하기 마련이고 모든것을 제대로 하긴 힘들다. 
+Flask는 당신을 위해 몇가지 문제를 대신 해결해준다. 하지만 당신이 해야할 일도 몇가지 있다.
 
 .. _xss:
 
 Cross-Site Scripting (XSS)
 --------------------------
 
-Cross site scripting is the concept of injecting arbitrary HTML (and with
-it JavaScript) into the context of a website.  To remedy this, developers
-have to properly escape text so that it cannot include arbitrary HTML
-tags.  For more information on that have a look at the Wikipedia article
-on `Cross-Site Scripting
-<http://en.wikipedia.org/wiki/Cross-site_scripting>`_.
+Cross-Site Scripting은 웹사이트에 임의의 HTML과 Javascript를 주입(inject)하는 개념이다.
+이것을 예방하기 위해서는 의도하지 않은 HTML코드가 받아지지 않도록 적절하게 텍스트를 escpae 
+해주어야 한다. 더 많은 정보를 위해선 위키피디아의 다음 글을 확인하기 바란다.
+`Cross-Site Scripting<http://en.wikipedia.org/wiki/Cross-site_scripting>`_.
 
 Flask configures Jinja2 to automatically escape all values unless
 explicitly told otherwise.  This should rule out all XSS problems caused
