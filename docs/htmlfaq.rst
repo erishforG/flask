@@ -37,9 +37,9 @@ Kid와 the pupular Genshi와 같은 XML 기반 템플릿 엔진들이 있지만,
 이전에 말한 것이 적절히 성립되지 않을때도 있다. 그래서 유효한 XHTML은
 유효하지 않은 HTML로 처리되었다.
 
-XHTML also changed the way JavaScript is used. To properly work with XHTML,
-programmers have to use the namespaced DOM interface with the XHTML
-namespace to query for HTML elements.
+XHTML은 또한 JavaScript가 사용되던 방식을 바꿨다. XHTML과 함께 적절히 작동하기 위해,
+프로그래머들은 HTML 요소들을 위해 쿼리하려고 XHTML 네임스페이스와 함께 namespaced DOM 인터페이스를
+사용해야만 한다.
 
 HTML5의 역사
 ----------------
