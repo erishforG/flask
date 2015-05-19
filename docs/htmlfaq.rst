@@ -44,12 +44,11 @@ XHTML은 또한 JavaScript가 사용되던 방식을 바꿨다. XHTML과 함께 
 HTML5의 역사
 ----------------
 
-Development of the HTML5 specification was started in 2004 under the name
-"Web Applications 1.0" by the Web Hypertext Application Technology Working
-Group, or WHATWG (which was formed by the major browser vendors Apple,
-Mozilla, and Opera) with the goal of writing a new and improved HTML
-specification, based on existing browser behavior instead of unrealistic
-and backwards-incompatible specifications.
+HTML5 개발환경 구체화는 2004년에 비현실적(unrealistic)이고 더디고 불완전한 조건들을 대신하여
+존재하는 브라우저 행동에 기반해, 새롭고 개선된 HTML 조건을 쓰자는 목적으로
+Web Hypertext Application Technology Working Group 혹은
+(주요 브라우저 회사인 애플, 모질라 그리고 오페라에 의해 형성된) WHATWG에 의해
+"웹 어플리케이션 1.0" 아래에 시작되었다.
 
 For example, in HTML4 ``<title/Hello/`` theoretically parses exactly the
 same as ``<title>Hello</title>``.  However, since people were using
