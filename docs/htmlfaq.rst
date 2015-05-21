@@ -50,10 +50,10 @@ Web Hypertext Application Technology Working Group 혹은
 (주요 브라우저 회사인 애플, 모질라 그리고 오페라에 의해 형성된) WHATWG에 의해
 "웹 어플리케이션 1.0" 아래에 시작되었다.
 
-For example, in HTML4 ``<title/Hello/`` theoretically parses exactly the
-same as ``<title>Hello</title>``.  However, since people were using
-XHTML-like tags along the lines of ``<link />``, browser vendors implemented
-the XHTML syntax over the syntax defined by the specification.
+예를 들어, HTML4에서 ``<title/Hello/`` 는 이론적으로 ``<title>Hello</title>``
+와 정확히 동일하게 분석한다. 그렇지만, 사람들이 ``<link />``의 줄들 사이에
+XHTML과 유사한 태그들을 사용했기 때문에, 브라우저 회사들은 조건들에 의해 정의된
+문맥얼 넘어서 XHTML 문맥으로부터 시행했다.
 
 In 2007, the specification was adopted as the basis of a new HTML
 specification under the umbrella of the W3C, known as HTML5.  Currently,
