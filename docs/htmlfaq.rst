@@ -55,17 +55,16 @@ Web Hypertext Application Technology Working Group 혹은
 XHTML과 유사한 태그들을 사용했기 때문에, 브라우저 회사들은 조건들에 의해 정의된
 문맥얼 넘어서 XHTML 문맥으로부터 시행했다.
 
-In 2007, the specification was adopted as the basis of a new HTML
-specification under the umbrella of the W3C, known as HTML5.  Currently,
-it appears that XHTML is losing traction, as the XHTML 2 working group has
-been disbanded and HTML5 is being implemented by all major browser vendors.
+2007년에, W3C의 상부 아래에서 HTML5라고 알려진, 새로운 HTML의 기초를 채용하였다.
+현재, XHTML은 XHTML 2 근무 그룹은 해체를 당하면서 견인할 힘을 일어가는 양상을
+띄고 있으며 HTML5는 모든 주요 브라우저 제공자들에 의해 채용되고 있다.
 
 HTML VS XHTML
 -----------------
 
-The following table gives you a quick overview of features available in
-HTML 4.01, XHTML 1.1 and HTML5. (XHTML 1.0 is not included, as it was
-superseded by XHTML 1.1 and the barely-used XHTML5.)
+아래의 표는 당신에게 HTML 4.01, XHTML 1.1과 HTML5에서 사용이 가능한 특징들을
+빠르게 볼 수 있게 만든 표이다. (XHTML 1.0은 XHTML 1.1과 거의 사용 안하게 된 XHTML5에
+의해 대체됨에 따라 포함이 안되었다.)
 
 .. tabularcolumns:: |p{9cm}|p{2cm}|p{2cm}|p{2cm}|
 
@@ -74,26 +73,26 @@ superseded by XHTML 1.1 and the barely-used XHTML5.)
 +=========================================+==========+==========+==========+
 | ``<tag/value/`` == ``<tag>value</tag>`` | |Y| [1]_ | |N|      | |N|      |
 +-----------------------------------------+----------+----------+----------+
-| ``<br/>`` supported                     | |N|      | |Y|      | |Y| [2]_ |
+| ``<br/>`` 지원                          | |N|      | |Y|      | |Y| [2]_ |
 +-----------------------------------------+----------+----------+----------+
-| ``<script/>`` supported                 | |N|      | |Y|      | |N|      |
+| ``<script/>`` 지원                      | |N|      | |Y|      | |N|      |
 +-----------------------------------------+----------+----------+----------+
-| should be served as `text/html`         | |Y|      | |N| [3]_ | |Y|      |
+| 반드시 `text/html`로 제공되야 함        | |Y|      | |N| [3]_ | |Y|      |
 +-----------------------------------------+----------+----------+----------+
-| should be served as                     | |N|      | |Y|      | |N|      |
-| `application/xhtml+xml`                 |          |          |          |
+| 반드시                                  | |N|      | |Y|      | |N|      |
+| `application/xhtml+xml` 로 제공되야 함  |          |          |          |
 +-----------------------------------------+----------+----------+----------+
-| strict error handling                   | |N|      | |Y|      | |N|      |
+| 엄격한 에러 핸들링                      | |N|      | |Y|      | |N|      |
 +-----------------------------------------+----------+----------+----------+
-| inline SVG                              | |N|      | |Y|      | |Y|      |
+| 인라인(inline) SVG                      | |N|      | |Y|      | |Y|      |
 +-----------------------------------------+----------+----------+----------+
-| inline MathML                           | |N|      | |Y|      | |Y|      |
+| 인라인(inline) MathML                   | |N|      | |Y|      | |Y|      |
 +-----------------------------------------+----------+----------+----------+
-| ``<video>`` tag                         | |N|      | |N|      | |Y|      |
+| ``<video>`` 태그                        | |N|      | |N|      | |Y|      |
 +-----------------------------------------+----------+----------+----------+
-| ``<audio>`` tag                         | |N|      | |N|      | |Y|      |
+| ``<audio>`` 태그                        | |N|      | |N|      | |Y|      |
 +-----------------------------------------+----------+----------+----------+
-| New semantic tags like ``<article>``    | |N|      | |N|      | |Y|      |
+| ``<article>`` 같은 새로운 시멘틱 태그들 | |N|      | |N|      | |Y|      |
 +-----------------------------------------+----------+----------+----------+
 
 .. [1] This is an obscure feature inherited from SGML. It is usually not
