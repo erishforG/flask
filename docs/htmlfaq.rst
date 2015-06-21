@@ -95,13 +95,12 @@ HTML VS XHTML
 | ``<article>`` 같은 새로운 시멘틱 태그들 | |N|      | |N|      | |Y|      |
 +-----------------------------------------+----------+----------+----------+
 
-.. [1] This is an obscure feature inherited from SGML. It is usually not
-       supported by browsers, for reasons detailed above.
-.. [2] This is for compatibility with server code that generates XHTML for
-       tags such as ``<br>``.  It should not be used in new code.
-.. [3] XHTML 1.0 is the last XHTML standard that allows to be served
-       as `text/html` for backwards compatibility reasons.
-
+.. [1] 이것은 SGML로부터 상속받은 잘 알려지지 않은 기능이다. 이것은 위에 자세하게
+       기제된 이유로 인해, 브라우저들에게서 보통 지원받지 않는다.
+.. [2] 이것은 ``<br>``와 같은 태그를 위해 XHTML을 발생시킨 서버 코드와의 호완성을 위한
+       것이다. 이것은 새 코드에서 사용하면 안된다.
+.. [3] XHTML 1.0 은 하위 호완성을 이유로 `text/html`와 같은 것을 제공하는 것을 허용하는
+       최신 XHTML 표준이다.
 .. |Y| image:: _static/yes.png
        :alt: Yes
 .. |N| image:: _static/no.png
