@@ -109,11 +109,10 @@ HTML VS XHTML
 "strict"의 의미는?
 ------------------------
 
-HTML5 has strictly defined parsing rules, but it also specifies exactly
-how a browser should react to parsing errors - unlike XHTML, which simply
-states parsing should abort. Some people are confused by apparently
-invalid syntax that still generates the expected results (for example,
-missing end tags or unquoted attribute values).
+HTML5는 엄격하게 정의된 파싱 규칙을 가지고 있지만, 파싱 에러에 어떻게 반응해야 할지
+정확하게 정의되어 있다 - 간단하게 파싱이 거절되야 한다고 표기하는 XHTML과는 다르게.
+몇몇 사람들은 명백하게 근거없는 구문이 여전히 기대값을 생성하기에 혼동한다.
+(예를 들어 빠트린 끝마침 태그(end tags) 또는 비정상의 속성값(attribute values))
 
 Some of these work because of the lenient error handling most browsers use
 when they encounter a markup error, others are actually specified.  The
